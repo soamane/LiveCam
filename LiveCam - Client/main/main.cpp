@@ -1,20 +1,19 @@
 #include "../Controllers/Physical/VideoController/VideoController.h"
+#include "../Controllers/Physical/AudioController/AudioController.h"
 
 #include <windows.h>
 
 int main() {
     try {
-        VideoController video;
+        AudioController audio;
 
-        // Trying to open any camera
-        video.OpenCamera(cv::CAP_ANY);
-        std::cout << "Camera status: " << std::boolalpha << video.IsOpen() << std::endl;
+        audio.SetupInputDevice();
+        audio.StartRecording(5); 
+        Pa_Sleep(5000);  
+        audio.Release();
 
-        // Starts the capture of camera
-        video.StartCapture();
-
-        // Close the camera capture after usage
-        video.StopCapture();
+        audio.SetupOutputDevice();
+        audio.PlayRecording();  
     }
     catch (const std::runtime_error& exception) {
         MessageBoxA(GetConsoleWindow(), exception.what(), "Exception", MB_ICONERROR);

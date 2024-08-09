@@ -21,9 +21,15 @@
     <ClCompile Include="Controllers\Physical\VideoController\VideoController.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Controllers\Physical\AudioController\AudioController.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controllers\Physical\VideoController\VideoController.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Controllers\Physical\AudioController\AudioController.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
