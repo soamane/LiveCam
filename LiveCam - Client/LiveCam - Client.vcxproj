@@ -72,28 +72,28 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
+    <IncludePath>$(PAUDIO_PATH)\include\;$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>..\bin\$(ProjectName)-build\</IntDir>
     <LibraryPath>$(OPENCV_DIR)\x64\vc16\lib;$(BOOST_ROOT)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
+    <IncludePath>$(PAUDIO_PATH)\include\;$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>..\bin\$(ProjectName)-build\</IntDir>
     <LibraryPath>$(OPENCV_DIR)\x64\vc16\lib;$(BOOST_ROOT)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
+    <IncludePath>$(PAUDIO_PATH)\include\;$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>..\bin\$(ProjectName)-build\</IntDir>
     <LibraryPath>$(OPENCV_DIR)\x64\vc16\lib;$(BOOST_ROOT)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <GenerateManifest>false</GenerateManifest>
-    <IncludePath>$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
+    <IncludePath>$(PAUDIO_PATH)\include\;$(OPENCV_DIR)\include\;$(BOOST_ROOT)\include\boost-1_85</IncludePath>
     <OutDir>..\bin\</OutDir>
     <IntDir>..\bin\$(ProjectName)-build\</IntDir>
     <LibraryPath>$(OPENCV_DIR)\x64\vc16\lib;$(BOOST_ROOT)\lib;$(LibraryPath)</LibraryPath>
