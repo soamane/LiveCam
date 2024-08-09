@@ -163,11 +163,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Controllers\CameraController\CameraController.cpp" />
+    <ClCompile Include="Controllers\Physical\VideoController\VideoController.cpp" />
     <ClCompile Include="Main\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controllers\CameraController\CameraController.h" />
+    <ClInclude Include="Controllers\Physical\VideoController\VideoController.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

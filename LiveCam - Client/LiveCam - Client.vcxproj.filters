@@ -18,12 +18,12 @@
     <ClCompile Include="Main\main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Controllers\CameraController\CameraController.cpp">
+    <ClCompile Include="Controllers\Physical\VideoController\VideoController.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controllers\CameraController\CameraController.h">
+    <ClInclude Include="Controllers\Physical\VideoController\VideoController.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

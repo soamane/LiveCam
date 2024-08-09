@@ -1,18 +1,18 @@
 #pragma once
-#ifndef CAMERA_CONTROLLER_H
-#define CAMERA_CONTROLLER_H
+#ifndef VIDEO_CONTROLLER_H
+#define VIDEO_CONTROLLER_H
 
 #include <opencv2/opencv.hpp>
 
-class CameraController {
+class VideoController {
 public:
-	CameraController();
-	~CameraController();
+	VideoController();
+	~VideoController();
 
 	void OpenCamera(int cameraId);
 
 	void StartCapture();
-	void CloseCameraCapture();
+	void StopCapture();
 
 	bool IsOpen() const;
 private:
@@ -20,4 +20,4 @@ private:
 	cv::VideoCapture m_capture;
 };
 
-#endif // !CAMERA_CONTROLLER_H
+#endif // !VIDEO_CONTROLLER_H

@@ -1,20 +1,20 @@
-#include "../Controllers/CameraController/CameraController.h"
+#include "../Controllers/Physical/VideoController/VideoController.h"
 
 #include <windows.h>
 
 int main() {
     try {
-        CameraController cameraController;
+        VideoController video;
 
         // Trying to open any camera
-        cameraController.OpenCamera(cv::CAP_ANY);
-        std::cout << "Camera status: " << std::boolalpha << cameraController.IsOpen() << std::endl;
+        video.OpenCamera(cv::CAP_ANY);
+        std::cout << "Camera status: " << std::boolalpha << video.IsOpen() << std::endl;
 
         // Starts the capture of camera
-        cameraController.StartCapture();
+        video.StartCapture();
 
         // Close the camera capture after usage
-        cameraController.CloseCameraCapture();
+        video.StopCapture();
     }
     catch (const std::runtime_error& exception) {
         MessageBoxA(GetConsoleWindow(), exception.what(), "Exception", MB_ICONERROR);

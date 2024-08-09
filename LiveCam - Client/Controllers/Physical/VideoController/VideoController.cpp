@@ -1,16 +1,16 @@
-#include "CameraController.h"
+#include "VideoController.h"
 
-CameraController::CameraController() : m_isOpen(false) {
+VideoController::VideoController() : m_isOpen(false) {
 }
 
-CameraController::~CameraController() {
+VideoController::~VideoController() {
     if (this->m_isOpen) {
         this->m_capture.release();
         cv::destroyAllWindows();
     }
 }
 
-void CameraController::OpenCamera(int cameraId) {
+void VideoController::OpenCamera(int cameraId) {
     this->m_capture = cv::VideoCapture(cameraId);
     if (!this->m_capture.isOpened()) {
         throw std::runtime_error("Failed to open the video camera");
@@ -18,7 +18,7 @@ void CameraController::OpenCamera(int cameraId) {
     this->m_isOpen = true;
 }
 
-void CameraController::StartCapture() {
+void VideoController::StartCapture() {
     if (!this->m_isOpen) {
         throw std::runtime_error("Video camera object is not opened");
     }
@@ -44,7 +44,7 @@ void CameraController::StartCapture() {
     cv::destroyWindow(windowName);
 }
 
-void CameraController::CloseCameraCapture() {
+void VideoController::StopCapture() {
     if (!this->m_isOpen) {
         throw std::runtime_error("Failed to close camera because it is not opened");
     }
@@ -54,7 +54,7 @@ void CameraController::CloseCameraCapture() {
     cv::destroyAllWindows();
 }
 
-bool CameraController::IsOpen() const
+bool VideoController::IsOpen() const
 {
     return this->m_isOpen;
 }
